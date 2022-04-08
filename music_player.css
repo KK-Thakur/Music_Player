@@ -1,0 +1,378 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #010134;
+    font-family: sans-serif;
+    color: white;
+}
+
+/* header */
+header{
+    height: 8%;
+    width: 100%;
+    margin: 0%;
+    /* border: 2px solid white; */
+    /* box-shadow: 0 10px 6px 4px whitesmoke; */
+    position: fixed;
+    top: 1%;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header img{
+    height: 100%;
+    width: 5%;
+    max-width: 85px;
+    min-width: 50px;   
+}
+#header_div{
+    width: 94%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* border: 2px solid white; */
+    font-size: 20px;
+    flex-wrap: nowrap;
+}
+#header_div form{
+    /* width: 60%; */
+    /* max-width: 400px; */
+    padding: 5px;
+    background-color: rgb(4 4 88);
+    /* border: 1px solid grey; */
+    border-radius: 5%;
+    margin-right: 4%;
+}
+#header_div form input{
+    padding-left: 4px;
+    font-size: 20px;
+    background-color: rgb(4 4 88);
+    border: 0;
+    outline: none;
+    color: white;
+    width: 85%;
+}
+#bell_icon{
+    position: relative;
+    margin-right: 5%;
+}
+#bell_icon i::after{
+    content:'';
+    display: inline-block;
+    height: 7px;
+    width: 7px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+}
+
+
+/* Main section */
+main{
+    position: fixed;
+    top: 9%;
+    left: 5%;
+    width: 63%;
+    height: 92%;
+    /* border: 2px solid white; */
+    overflow-y:scroll;
+}
+
+/* classes */
+.scroll_bar{
+    -ms-overflow-style: none; /*To remove scrollbar for IE and Edge */
+    scrollbar-width: none; /*To remove scrollbar for firefox*/
+}
+/*To remove scrollbar for chrome safari and opera*/
+.scroll_bar::-webkit-scrollbar {
+    display: none;
+  }
+
+.m-top-2{
+    margin-top: 2%;
+    /* border: 2px solid white ; */
+}
+.m-top-1{
+    margin-top: 1%;
+}
+
+h3{
+    /* margin: 0; */
+    margin-bottom: 6px;
+}
+
+/* section inside main */
+main section{
+    width: 100%;
+    height: auto;
+}
+.section_first_div{
+    width: 100%;
+    height: auto;
+    /* border: 2px solid white; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* favorites */
+#opacity{
+    height: 4%;
+    /* background-color: #010134; */
+    position: fixed;
+    opacity: 0.9;
+}
+/* favourites */
+#favourites{
+    margin-top: 5%;
+}
+#Favourites_song div{
+    margin: 1%;
+    width: 23%;
+    min-width: 125px;
+    height: auto;
+    transition: 0.3s linear;
+}
+#Favourites_song img{
+    width: 100%;
+    height: 100%;
+}
+#Favourites_song div:hover{
+    transform:scale(1.1);
+}
+
+/* Latest Release */
+.latest_song_disc{
+    width: 45%;
+    margin: 0 1% 1%;
+    /* border: 1px solid white; */
+    display: flex;
+}
+.latest_song_disc img{
+    width: 17%;
+    min-width: 60px;
+}
+.latest_song_disc span{
+    width: 76%;
+    display:flex;
+    justify-content: space-between;
+    margin-left: 2%;
+    /* border: 1px solid white; */
+    vertical-align: top;
+    margin-top: 2%;
+}
+.latest_song_div1 h5,p{
+    margin-bottom: 0;
+    margin-top: 5%;
+    letter-spacing: 1px;
+}
+.latest_song_div1 p{
+    font-size: 13px;
+}
+.latest_song_div2{
+    display: inline-block;
+    vertical-align: top;
+}
+.latest_song_div2 i{
+    cursor: pointer;
+}
+.latest_song_div2 p{
+    margin-bottom: 0;
+    margin-top: 20%;
+    font-size: 12px;
+}
+
+/* popular artists */
+.artists{
+    width: 14%;
+    min-width: 80px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 1% 1.5%;
+}
+.artists img{
+    width: 90%;
+    border-radius: 50%;
+}
+.artists p{
+    font-size: 0.9rem;
+    margin-top: 0;
+}
+
+/* song type */
+#station{
+    height: 20%;
+    background-color: #21214e ;
+    display: flex;
+    align-items: center;
+}
+#station_image{
+    width: 14%;
+    margin: 0 1% 0 2%;
+}
+#station_image img{
+    width: 100%;
+}
+#station_songs{
+    width: 83%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+}
+#station_songs div{
+    width: 12%;
+    min-width: 60px;
+    margin-left: 1.5%;
+    position: relative;
+    text-align: center;
+}
+#station_songs div img{
+    width: 100%;
+    border-radius: 50%;
+    opacity: 0.5; 
+}
+#station_songs p{
+    position: absolute;
+    top:38%;
+    left: 28%;
+    font-size: 1rem;
+}
+#station_workout p{
+    position: absolute;
+    top:38%;
+    left: 6%;
+}
+
+/* Song type */
+#song_type{
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 3% 0;
+}
+#song_type div{
+    width: 30%;
+    height: 25%;
+    margin: 0 1%;
+    min-width: 150px;
+    /* border: 1px solid white; */
+    position: relative;
+    overflow: hidden;
+}
+#song_type div img{
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    transition: 0.4s linear;
+}
+#song_type div p{
+    position: absolute;
+    top: 37%;
+    left: 37%;
+} 
+#song_type div:hover img{
+    transform: scale(1.3);
+}
+
+/* Latest English */
+.latest_english_songs div{
+    width: 12%;
+    min-width: 30px;
+    height: auto;
+    margin: 0 1% 1%;
+}
+.latest_english_songs img{
+    width: 100%;
+}
+.latest_english_songs h5,p{
+    margin: 4% 0 0;
+}
+.latest_english_songs p{
+    font-size: 12px;
+}
+
+#latest_hindi{
+    margin-bottom: 40px;
+}
+
+ /* aside section */
+aside{
+    width: 24%;
+    height: 85%;
+    /* border: 2px solid white; */
+    position: fixed;
+    top: 15%;
+    left: 70%;
+    overflow-y: scroll;
+}
+#aside_header{
+    width: 25%;
+    height: auto;
+    display: flex; 
+    justify-content: space-between;
+    position: fixed;
+    top: 14%;
+    background-color: #010134;
+    opacity: 0.8;
+}
+
+#aside_header h2{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#aside_header span{
+    margin: 2%;
+    color: rgb(0, 255, 234);
+    font-size: 0.9rem;
+}
+aside span p{
+    display: inline;
+    margin-right: 0.3rem;
+    cursor: pointer;
+}
+#queue{
+    height: auto;
+    width: 100%;
+    margin-top: 3rem;
+}
+.queue_song{
+    height: 7%;
+    width: 100%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.queue_song_desc{
+    height: auto;
+    width: 90%;
+}
+.queue_song_desc p{
+    font-size: 0.8rem;
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: 1px;
+    color: lightgray;
+}
+.queue_song_desc img{
+    width: 12%;
+    height: auto;
+    margin: 0 3%;
+    box-shadow: 0 0 8px 0.8px lightgray;
+}
+.queue_name{
+    display: inline-block;
+    vertical-align: top;
+}
+.queue_name h5{
+    margin: 6% 0 0;
+    letter-spacing: 1px;
+}
